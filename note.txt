@@ -1,0 +1,58 @@
+nova-invoice/
+├── public/
+│   ├── favicon.ico
+│   ├── logo.svg
+│   └── og-image.png
+│
+├── src/
+│   ├── app/
+│   │   ├── page.tsx               # Home
+│   │   ├── layout.tsx             # Layout + SEO
+│   │   ├── pricing/page.tsx       # Pricing page
+│   │   ├── features/page.tsx      # Feature highlights
+│   │   ├── invoice-builder/page.tsx
+│   │   ├── dashboard/page.tsx
+│   │   └── api/                   # API routes (optional)
+│   │
+│   ├── components/                # Reusable UI
+│   │   ├── Header.tsx
+│   │   ├── Footer.tsx
+│   │   ├── Button.tsx
+│   │   └── InvoicePreview.tsx
+│   │
+│   ├── lib/
+│   │   ├── watermark.ts
+│   │   └── payment.ts
+│   └── styles/
+│       └── globals.css
+│
+├── tailwind.config.ts
+├── postcss.config.js
+├── next.config.js
+├── tsconfig.json
+└── README.md 
+-- User table
+create table users (
+  id uuid primary key default gen_random_uuid(),
+  email text unique,
+  created_at timestamp default now()
+);
+
+-- Invoices
+create table invoices (
+  id uuid primary key default gen_random_uuid(),
+  user_id uuid references users(id),
+  client_name text,
+  amount text,
+  upgraded boolean default false,
+  created_at timestamp default now()
+);
+
+
+
+yarn dev
+npm install framer-motion
+yarn add framer-motion         
+yarn add @supabase/supabase-js
+
+113ee1f7d688e9aada82cb2e5b97d7ef
