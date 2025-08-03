@@ -9,20 +9,23 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "framer-motion": "^10.12.16",
+    "html2canvas": "^1.4.1",
+    "jspdf": "^3.0.1",
+    "lucide-react": "^0.268.0",
     "next": "^15.4.5",
+    "next-auth": "^4.22.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "next-auth": "^4.22.1",
-    "lucide-react": "^0.268.0",
-    "react-qr-code": "^2.0.6",
-    "framer-motion": "^10.12.16"
+    "react-qr-code": "^2.0.6"
   },
   "devDependencies": {
+    "@tailwindcss/postcss": "^4.1.11",
     "@types/node": "^20.2.5",
     "@types/react": "^18.2.6",
     "@types/react-dom": "^18.2.4",
-    "typescript": "^5.0.4",
     "eslint": "8.45.0",
-    "eslint-config-next": "13.4.8"
+    "eslint-config-next": "13.4.8",
+    "typescript": "^5.0.4"
   }
 }
