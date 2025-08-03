@@ -1,12 +1,12 @@
 "use client";
 
-import { useState } from "react";
+import React, { useState } from "react";
 import { signIn } from "next-auth/react";
 
 export default function LoginPage() {
   const [email, setEmail] = useState("");
 
-  const handleLogin = async (e: any) => {
+  const handleLogin = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     await signIn("email", { email, callbackUrl: "/dashboard" });
   };

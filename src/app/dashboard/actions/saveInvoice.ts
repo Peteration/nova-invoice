@@ -2,7 +2,12 @@
 
 import { supabase } from "@/lib/supabase";
 
-export async function saveInvoice(data: any, email: string) {
+interface InvoiceData {
+  clientName: string;
+  amount: number;
+}
+
+export async function saveInvoice(data: InvoiceData, email: string) {
   const { data: user } = await supabase
     .from("users")
     .select("*")
